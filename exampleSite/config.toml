@@ -2,8 +2,8 @@ baseURL = "https://demo.gethugothemes.com/timer/site/"
 languageCode = "en-us"
 title = "Timer | Responsive Multipurpose Bootstrap Hugo Template"
 theme = "timer-hugo"
-# post pagination
 paginate = "2" # see https://gohugo.io/extras/pagination/
+favicon = "images/favicon.ico"
 
 # We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
 
