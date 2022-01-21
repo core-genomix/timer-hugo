@@ -2,11 +2,11 @@
 
 {{ partial "page-title.html" . }}
 
-{{ if .Site.Data.contact.enable }}
 {{ "<!-- Contact Section Start -->" | safeHTML }}
 <section id="contact-section">
   <div class="container">
     <div class="row">
+      {{ if .Site.Data.contact.enable_contact }}
       <div class="col-md-6 mb-5 mb-md-0">
         <div class="block">
           {{ with .Site.Data.contact.contactFormTitle }}<h2 class="subtitle wow fadeInDown" data-wow-duration="500ms"
@@ -40,6 +40,8 @@
           </div>
         </div>
       </div>
+      {{ end }}
+      {{ if .Site.Data.contact.enable_map }}
       <div class="col-md-6">
         <div class="map-area">
           {{ with .Site.Data.contact.mapTitle }}<h2 class="subtitle  wow fadeInDown" data-wow-duration="500ms"
@@ -53,7 +55,9 @@
           </div>
         </div>
       </div>
+      {{ end }}
     </div>
+    {{ if .Site.Data.contact.enable_details }}
     <div class="row address-details">
       <div class="col-lg-3 col-sm-6">
         <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
@@ -82,10 +86,10 @@
         </div>
       </div>
     </div>
+    {{ end }}
   </div>
 </section>
 {{ "<!-- Contact Section End -->" | safeHTML }}
-{{ end }}
 
 {{ partial "cta.html" . }}
 
