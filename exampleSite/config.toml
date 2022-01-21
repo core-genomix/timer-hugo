@@ -51,6 +51,11 @@ googleAnalitycsID = "Your ID"
 # contact form action
 contactFormAction = "#" # contact form works with https://formspree.io
 
+# Color definition
+[params.variables]
+theme_color = "#02bdd5"
+theme_color_shadow = "#00a4ba"
+
 # Banner Section
 [params.banner]
 enable = true

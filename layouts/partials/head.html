@@ -33,11 +33,10 @@
   {{ "<!-- hover -->" | safeHTML }}
   <link rel="stylesheet" href="{{ `plugins/hover/hover-min.css` | absURL }}">
   {{ "<!-- template main css file -->" | safeHTML }}
-  {{ $styles := resources.Get "css/style.css" | minify}}
+  {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS | minify }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-  
-	{{"<!-- Custom stylesheet - for your changes -->" |safeHTML}}
-	{{ $custom := resources.Get "css/custom.css" | minify }}
+  {{"<!-- Custom stylesheet - for your changes -->" |safeHTML}}
+  {{ $custom := resources.Get "scss/custom.scss" | resources.ToCSS | minify }}
   <link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
   
 </head>
