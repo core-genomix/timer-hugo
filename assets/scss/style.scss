@@ -6,10 +6,13 @@
 {{ with site.Params.variables }}
 $theme-color : {{ .theme_color | default "#02bdd5" }};
 $theme-color-shadow : {{ .theme_color_shadow | default "darken($theme-color, 10%)" }};
+$header-color : {{ .header_color | default "#ffffff" }};
+$text-color : {{ .text_color | default "#727272" }};
 {{ end }}
 
 body {
   font-family: "Roboto", sans-serif;
+  color : $text-color
 }
 
 h1,
@@ -60,7 +63,7 @@ a:hover {
 .section-heading p {
   font-size: 14px;
   font-weight: 300;
-  color: #727272;
+  color: $text-color;
   line-height: 20px;
 }
 
@@ -68,7 +71,7 @@ a:hover {
   font-size: 30px;
   line-height: 1.1;
   font-weight: 300;
-  color: #333;
+  color: darken($theme-color, 25%);
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -81,7 +84,7 @@ a:hover {
 }
 
 .subtitle-des {
-  color: #727272;
+  color: $text-color;
   font-size: 14px;
   margin-bottom: 35px;
   font-weight: 300;
@@ -102,7 +105,7 @@ a:hover {
 
 .social-share a {
   font-size: 20px;
-  color: #fff;
+  color: #ffffff;
   background: $theme-color;
   padding: 4px 10px;
   display: inline-block;
@@ -145,13 +148,13 @@ a:hover {
   padding: 120px 0 25px 0;
   position: relative;
   background: $theme-color;
-  color: #fff;
+  color: $header-color;
 }
 
 .global-page-header h2 {
   font-size: 42px;
   font-weight: bold;
-  color: #fff;
+  color: $header-color;
   text-transform: uppercase;
 }
 
@@ -164,7 +167,7 @@ a:hover {
 
 .global-page-header .breadcrumb .active,
 .global-page-header .breadcrumb li a {
-  color: #fff;
+  color: $header-color;
 }
 
 .global-page-header .block {
@@ -190,7 +193,7 @@ a:hover {
 }
 
 .company-description .block p {
-  color: #727272;
+  color: $text-color;
 }
 
 /*=== MEDIA QUERY ===*/
@@ -198,8 +201,8 @@ a:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #fff;
-  color: #fff;
+  background: #ffffff;
+  color: #ffffff;
   transition: all 0.2s ease-out 0s;
   padding: 15px 0;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -209,7 +212,7 @@ a:hover {
 
 .top-bar.animated-header {
   padding: 20px 0;
-  background: #fff;
+  background: $header-color;
   box-shadow: none;
 }
 
@@ -221,11 +224,11 @@ a:hover {
 }
 
 .navbar.bg-light {
-  background: #fff !important;
+  background: #ffffff !important;
 }
 
 .navbar .nav-item .nav-link {
-  color: #444 !important;
+  color: darken($text-color, 20%) !important;
   font-size: 14px;
   font-weight: 500;
   transition: .3s all;
@@ -266,7 +269,7 @@ a:hover {
 }
 
 .dropdown-item {
-  color: #fff;
+  color: #ffffff;
   display: block;
   font-size: 14px;
   font-weight: 500;
@@ -297,7 +300,7 @@ a:hover {
   background-size: cover;
   background-attachment: fixed;
   padding: 230px 0;
-  color: #fff;
+  color: #ffffff;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   position: relative;
 }
@@ -321,7 +324,7 @@ a:hover {
 #hero-area h1 {
   font-size: 40px;
   line-height: 50px;
-  color: #333;
+  color: darken($theme-color, 25%);
   font-weight: 700;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -333,7 +336,7 @@ a:hover {
   margin-bottom: 38px;
   line-height: 27px;
   text-transform: uppercase;
-  color: #666;
+  color: darken($header-color, 5%);
   font-family: 'Roboto', sans-serif;
   margin-top: 25px;
 }
@@ -341,7 +344,7 @@ a:hover {
 #hero-area .btn {
   background: #414141;
   border: none;
-  color: #fff;
+  color: #ffffff;
   padding: 20px 35px;
   margin-top: 30px;
   font-size: 16px;
@@ -359,18 +362,18 @@ a:hover {
   padding: 80px 0;
   text-align: center;
   position: relative;
-  color: #fff;
+  color: #ffffff;
 }
 
 #call-to-action .block {
   position: relative;
   z-index: 9;
-  color: #fff;
+  color: #ffffff;
 }
 
 #call-to-action .block h2 {
   margin-bottom: 15px;
-  color: #fff;
+  color: #ffffff;
 }
 
 #call-to-action .block p {
@@ -381,8 +384,8 @@ a:hover {
 }
 
 #call-to-action .block .btn-contact {
-  background: #fff;
-  border: 2px solid #fff;
+  background: #ffffff;
+  border: 2px solid #ffffff;
   color: $theme-color;
   padding: 15px 34px;
   margin-top: 20px;
@@ -398,7 +401,7 @@ a:hover {
 }
 
 #call-to-action .block .btn-contact:hover {
-  color: #fff;
+  color: #ffffff;
   background: $theme-color;
 }
 
@@ -418,7 +421,7 @@ a:hover {
 }
 
 #about .block p {
-  color: #727272;
+  color: $text-color;
   font-size: 16px;
   line-height: 28px;
   margin-bottom: 35px;
@@ -429,7 +432,7 @@ a:hover {
 }
 
 .about-feature .block {
-  color: #fff;
+  color: #ffffff;
   padding: 85px 65px;
   float: left;
 }
@@ -467,7 +470,7 @@ a:hover {
 .works .block h4 {
   padding: 20px 15px;
   margin-top: 0;
-  color: #666;
+  color: darken($text-color, 5%);
 }
 
 .works .block .img-overly {
@@ -498,11 +501,11 @@ a:hover {
 
 .works .block .img-overly .overly a i {
   font-size: 30px;
-  color: #fff;
+  color: #ffffff;
 }
 
 figure {
-  background: #fff;
+  background: #ffffff;
   margin-bottom: 45px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.04), 0 2px 10px 0 rgba(0, 0, 0, 0.06);
 }
@@ -544,10 +547,10 @@ figure .overlay {
 
 figure .overlay a {
   display: inline-block;
-  color: #fff;
+  color: #ffffff;
   padding: 10px 23px;
   line-height: 1;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   border-radius: 0px;
   margin: 4px;
   transform: scale3d(0, 0, 0);
@@ -581,7 +584,7 @@ figure .buttons a:focus {
 figure figcaption {
   padding: 20px 25px;
   margin-top: 0;
-  color: #666;
+  color: darken($text-color, 5%);
 }
 
 figure figcaption h4 {
@@ -623,12 +626,12 @@ figure figcaption p {
 #feature p {
   line-height: 25px;
   font-size: 14px;
-  color: #777777;
+  color: $text-color;
 }
 
 #feature .icon {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   background-color: $theme-color;
   height: 100px;
   text-align: center;
@@ -658,7 +661,7 @@ figure figcaption p {
 .wrapper_404 .btn-home {
   background: #414141;
   border: none;
-  color: #fff;
+  color: #ffffff;
   padding: 20px 35px;
   margin-top: 10px;
   font-size: 16px;
@@ -683,7 +686,7 @@ article {
 }
 
 .blog-content h2 a {
-  color: #444;
+  color: darken($text-color, 20%);
   font-weight: 400;
   font-size: 30px;
 }
@@ -711,11 +714,11 @@ article {
   color: $theme-color;
   padding: 0;
   background: $theme-color;
-  color: #fff;
+  color: #ffffff;
   padding: 8px 18px;
   border-radius: 0;
   margin-top: 15px;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   box-shadow: 0px 0px 0px 1px $theme-color;
 }
 
@@ -756,7 +759,7 @@ article {
   width: 90px;
   border-radius: 100%;
   margin-top: -40px;
-  border: 3px solid #fff;
+  border: 3px solid #ffffff;
 }
 
 .sidebar .author .author-bio p {
@@ -773,7 +776,7 @@ article {
 .sidebar .categories ul li span.badge {
   float: right;
   background: transparent;
-  color: #444;
+  color: darken($text-color, 20%);
   border: 1px solid #dedede;
   border-radius: 0;
 }
@@ -818,7 +821,7 @@ article {
 }
 
 #contact-section .contact-form .btn-send {
-  color: #fff;
+  color: #ffffff;
   outline: none;
   background: $theme-color;
   transition: all linear .2s;
@@ -832,7 +835,7 @@ article {
   padding: 6px 12px;
   font-size: 13px;
   line-height: 1.428571429;
-  background-color: #fff;
+  background-color: #ffffff;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -852,7 +855,7 @@ article {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
-  background-color: #fff;
+  background-color: #ffffff;
   background-image: none;
   border: 1px solid #cccccc;
   box-shadow: none;
@@ -903,7 +906,7 @@ article {
 .success {
   background-color: #6cb670;
   border-radius: 2px;
-  color: #fff;
+  color: #ffffff;
   font-size: 14px;
   padding: 10px;
 }
@@ -928,7 +931,7 @@ article {
 }
 
 .portfolio-meta span a {
-  color: #fff;
+  color: #ffffff;
 }
 
 .single-post {
@@ -948,7 +951,7 @@ article {
 
 .single-post .post-content ol li,
 .single-post .post-content ul li {
-  color: #666;
+  color: darken($text-color, 5%);
 }
 
 .single-post .media {
@@ -984,7 +987,7 @@ article {
 
 .single-post .post-comment .btn-send {
   background: $theme-color;
-  color: #fff;
+  color: #ffffff;
   border-radius: 0;
 }
 
@@ -1034,7 +1037,7 @@ article {
 }
 
 .btn-work {
-  color: #fff;
+  color: #ffffff;
   background: $theme-color;
   border-radius: 0;
 }
@@ -1055,7 +1058,7 @@ article {
 }
 
 #product-showcase-banner .block p {
-  color: #666;
+  color: darken($text-color, 5%);
   line-height: 25px;
 }
 
@@ -1064,7 +1067,7 @@ article {
 }
 
 #product-showcase-banner .block .buttons .btn {
-  color: #fff;
+  color: #ffffff;
   border: none;
   padding: 12px 40px;
   transition: .2s all;
@@ -1147,7 +1150,7 @@ article {
   padding: 10px 0;
   margin: 5px 15px 30px 15px;
   text-align: left;
-  color: #777;
+  color: $text-color;
 }
 
 #related-items .product-details {
@@ -1156,7 +1159,7 @@ article {
 
 #related-items .block {
   position: relative;
-  background: #fff;
+  background: #ffffff;
   margin-bottom: 45px;
   box-shadow: 0 0px 1px rgba(0, 0, 0, 0.14);
 }
@@ -1168,7 +1171,7 @@ article {
 #related-items .block h4 {
   padding: 20px 15px;
   margin-top: 0;
-  color: #666;
+  color: darken($text-color, 5%);
 }
 
 #related-items .block h4 span {
@@ -1204,7 +1207,7 @@ article {
 
 #related-items .block .img-overly .overly a i {
   font-size: 30px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .service-page .service-parts .block {
@@ -1220,7 +1223,7 @@ article {
 .service-page .service-parts .block p {
   padding: 0 8px;
   font-size: 14px;
-  color: #777;
+  color: $text-color;
   line-height: 1.7;
 }
 
@@ -1261,7 +1264,7 @@ article {
 
 .team-member .social-icons a {
   background: $theme-color;
-  color: #fff;
+  color: #ffffff;
   padding: 4px 8px;
   display: inline-block;
   font-size: 15px;
@@ -1272,7 +1275,7 @@ article {
 }
 
 #footer {
-  background: #fff;
+  background: #ffffff;
   padding: 25px 0;
   color: #555;
 }
