@@ -148,7 +148,7 @@ a:hover {
   background-size: cover;
   padding: 120px 0 25px 0;
   position: relative;
-  {{ if hasPrefix $header_bg "#" }}
+  {{ if or (hasPrefix $header_bg "#") (hasPrefix $header_bg "$") }}
   background: {{ $header_bg }};
   {{ else }}
   background-image: url( "{{ $header_bg | absURL }}" );

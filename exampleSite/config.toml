@@ -56,7 +56,7 @@ contactFormAction = "#" # contact form works with https://formspree.io
 theme_color = "#02bdd5"
 header_color = "#ffffff"
 text_color = "#727272"
-# Header background color or image
+# Header background color or image (if not, theme color by default)
 header_bg = ""
 
 # Banner Section
