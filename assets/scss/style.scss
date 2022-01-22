@@ -9,6 +9,7 @@ $theme-color-shadow : {{ .theme_color_shadow | default "darken($theme-color, 10%
 $header-color : {{ .header_color | default "#ffffff" }};
 $text-color : {{ .text_color | default "#727272" }};
 {{ end }}
+{{ $header_bg := site.Params.variables.header_bg | default "$theme-color" }};
 
 body {
   font-family: "Roboto", sans-serif;
@@ -147,7 +148,11 @@ a:hover {
   background-size: cover;
   padding: 120px 0 25px 0;
   position: relative;
-  background: $theme-color;
+  {{ if hasPrefix $header_bg "#" }}
+  background: {{ $header_bg }};
+  {{ else }}
+  background-image: url( "{{ $header_bg | absURL }}" );
+  {{ end }}
   color: $header-color;
 }
 
