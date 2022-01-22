@@ -1,6 +1,10 @@
 {{ if .Site.Params.cta.enable }}
 {{ "<!-- Call To Action Section Start -->" | safeHTML }}
+{{ with .Site.Params.cta }}
+<section id="call-to-action" style='background-image: url({{ .bgImage | absURL }});'>
+{{ else }}
 <section id="call-to-action">
+{{ end }}}
   <div class="container">
     <div class="row">
       <div class="col-md-12">
