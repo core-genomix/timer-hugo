@@ -11,10 +11,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }}</title>
   <!-- favicon -->
-  {{ $favicon:= site.Params.favicon }}
+  {{ $favicon := site.Params.favicon }}
   {{ if $favicon }}
   {{ if fileExists (add `static/` $favicon) }}
-  <link rel="icon" href="{{ $favicon }} | absURL }}">
+  <link rel="icon" href="{{ $favicon | absURL }}">
   {{ end }}
   {{ end }}
 
